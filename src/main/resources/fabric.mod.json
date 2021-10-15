@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "prisonescape",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Prison-Escape",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "Monull2452"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -14,16 +14,15 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.monull.prisonescape.PrisonEscapeMod"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+
   ],
 
   "depends": {
