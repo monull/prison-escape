@@ -1,5 +1,6 @@
 package io.github.monull.prisonescape.screen;
 
+import io.github.monull.prisonescape.screen.widget.CheckBoxWidget;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
@@ -15,12 +16,10 @@ public class KeyCardReaderScreen extends Screen {
         super.init();
         super.init(MinecraftClient.getInstance(), MinecraftClient.getInstance().getWindow().getWidth(), MinecraftClient.getInstance().getWindow().getHeight());
         this.entity = entity;
-        addDrawableChild(new ButtonWidget(5, 5, 5, 5, new LiteralText("hello world"), (widget) -> {
-
-        }));
         addDrawableChild(new ButtonWidget(45, 45, 45, 45, new LiteralText("hello world"), (widget) -> {
 
         }));
+        addDrawableChild(new CheckBoxWidget(5, 5, 20, 20));
     }
 
     @Override
