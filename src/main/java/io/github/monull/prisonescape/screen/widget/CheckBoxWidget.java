@@ -1,6 +1,7 @@
 package io.github.monull.prisonescape.screen.widget;
 
 import com.mojang.blaze3d.systems.RenderSystem;
+import io.github.monull.prisonescape.screen.KeyCardReaderScreen;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawableHelper;
 import net.minecraft.client.gui.screen.Screen;
@@ -15,9 +16,15 @@ import java.util.Collections;
 
 public class CheckBoxWidget extends ButtonWidget {
 
-    public CheckBoxWidget(int x, int y, int width, int height) {
+    public CheckBoxWidget(int x, int y, int width, int height, KeyCardReaderScreen screen, int number) {
         super(x, y, width, height, new LiteralText(""), (widget) -> {
-            MinecraftClient.getInstance().player.sendMessage(new LiteralText("hello world"), true);
+            boolean i = screen.list.get(number);
+            if (i) {
+                screen.list.set(number, false);
+            } else {
+                screen.list.set(number, true);
+            }
+            MinecraftClient.getInstance().player.sendMessage(new LiteralText(String.valueOf(i)), true);
         });
     }
 
