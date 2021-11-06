@@ -1,10 +1,10 @@
-package io.github.monull.prisonescape;
+package io.github.monull.roomescape;
 
-import io.github.monull.prisonescape.block.KeyCardReaderBlock;
-import io.github.monull.prisonescape.blockentity.KeyCardReaderBlockEntity;
-import io.github.monull.prisonescape.item.BlockModifierItem;
-import io.github.monull.prisonescape.item.KeyCardItem;
-import io.github.monull.prisonescape.item.KeyCardReaderItem;
+import io.github.monull.roomescape.block.KeyCardReaderBlock;
+import io.github.monull.roomescape.blockentity.KeyCardReaderBlockEntity;
+import io.github.monull.roomescape.item.BlockModifierItem;
+import io.github.monull.roomescape.item.KeyCardItem;
+import io.github.monull.roomescape.item.KeyCardReaderItem;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -13,7 +13,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 

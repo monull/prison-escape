@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "prisonescape",
+  "id": "roomescape",
   "version": "${version}",
 
-  "name": "Prison-Escape",
+  "name": "Room-Escape",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Monull2452"
@@ -18,7 +18,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.monull.prisonescape.PrisonEscapeMod"
+      "io.github.monull.roomescape.RoomEscapeMod"
     ]
   },
   "mixins": [

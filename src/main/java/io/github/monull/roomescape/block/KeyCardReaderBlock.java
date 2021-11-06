@@ -1,18 +1,20 @@
-package io.github.monull.prisonescape.block;
+package io.github.monull.roomescape.block;
 
-import io.github.monull.prisonescape.RegistrationHandler;
-import io.github.monull.prisonescape.blockentity.KeyCardReaderBlockEntity;
-import io.github.monull.prisonescape.item.BlockModifierItem;
-import io.github.monull.prisonescape.item.KeyCardItem;
-import io.github.monull.prisonescape.screen.KeyCardReaderScreen;
+import io.github.monull.roomescape.RegistrationHandler;
+import io.github.monull.roomescape.blockentity.KeyCardReaderBlockEntity;
+import io.github.monull.roomescape.item.BlockModifierItem;
+import io.github.monull.roomescape.item.KeyCardItem;
+import io.github.monull.roomescape.screen.KeyCardReaderScreen;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
@@ -38,6 +40,15 @@ public class KeyCardReaderBlock extends Block implements BlockEntityProvider {
 
     public KeyCardReaderBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
+        super.onPlaced(world, pos, state, placer, itemStack);
+        KeyCardReaderBlockEntity be = (KeyCardReaderBlockEntity) world.getBlockEntity(pos);
+        for (int i = 1; i <= 5; i++) {
+            be.allows.set(i, false);
+        }
     }
 
     @Override

@@ -1,8 +1,8 @@
-package io.github.monull.prisonescape;
+package io.github.monull.roomescape;
 
 import net.fabricmc.api.ModInitializer;
 
-public class PrisonEscapeMod implements ModInitializer {
+public class RoomEscapeMod implements ModInitializer {
     @Override
     public void onInitialize() {
         RegistrationHandler.registerBlocks();

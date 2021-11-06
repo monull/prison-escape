@@ -1,4 +1,4 @@
-package io.github.monull.prisonescape.item;
+package io.github.monull.roomescape.item;
 
 import net.minecraft.item.Item;
 
