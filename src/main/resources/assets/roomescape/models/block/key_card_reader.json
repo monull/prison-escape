@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "prisonescape:blocks/key_card_reader_front",
-		"1": "prisonescape:blocks/key_card_reader_top",
-		"2": "prisonescape:blocks/key_card_reader_side",
-		"particle": "prisonescape:blocks/key_card_reader_front"
+		"0": "roomescape:blocks/key_card_reader_front",
+		"1": "roomescape:blocks/key_card_reader_top",
+		"2": "roomescape:blocks/key_card_reader_side",
+		"particle": "roomescape:blocks/key_card_reader_front"
 	},
 	"elements": [
 		{

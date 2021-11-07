@@ -31,6 +31,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class KeyCardReaderBlock extends Block implements BlockEntityProvider {
@@ -46,8 +47,8 @@ public class KeyCardReaderBlock extends Block implements BlockEntityProvider {
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
         super.onPlaced(world, pos, state, placer, itemStack);
         KeyCardReaderBlockEntity be = (KeyCardReaderBlockEntity) world.getBlockEntity(pos);
-        for (int i = 1; i <= 5; i++) {
-            be.allows.set(i, false);
+        for (int i = 0; i <= 4; i++) {
+            be.allows.add(i, false);
         }
     }
 

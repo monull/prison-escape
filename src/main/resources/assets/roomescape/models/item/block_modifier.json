@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "prisonescape:items/block-modifier",
-		"particle": "prisonescape:items/block-modifier"
+		"0": "roomescape:items/block-modifier",
+		"particle": "roomescape:items/block-modifier"
 	},
 	"elements": [
 		{

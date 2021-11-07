@@ -8,15 +8,10 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class KeyCardReaderBlockEntity extends BlockEntity {
 
-    public List<Boolean> allows = new ArrayList<>(5);
-
-    public KeyCardReaderBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
-        super(type, pos, state);
-    }
+    public ArrayList<Boolean> allows = new ArrayList<>(5);
 
     public KeyCardReaderBlockEntity(BlockPos pos, BlockState state) {
         super(RegistrationHandler.KEY_CARD_READER_BLOCK, pos, state);
@@ -26,23 +21,18 @@ public class KeyCardReaderBlockEntity extends BlockEntity {
         if (allows.get(level)) return true; else return false;
     }
 
+    public boolean getAllows(int i) {
+        return allows.get(i);
+    }
+
     @Override
     public NbtCompound writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
-        for (int i = 1; i <= 5; i++) {
-            boolean bool = allows.get(i);
-            nbt.putBoolean(String.valueOf(i), bool);
-        }
         return nbt;
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
-        for (int i = 1; i <= 5; i++) {
-            if (nbt.contains(String.valueOf(i))) {
-                allows.set(i, nbt.getBoolean(String.valueOf(i)));
-            }
-        }
     }
 }

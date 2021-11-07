@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "prisonescape:items/key_card_level3"
+    "layer0": "roomescape:items/key_card_level3"
   }
 }
