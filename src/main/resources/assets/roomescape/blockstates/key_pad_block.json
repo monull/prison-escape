@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,powered=true": { "model": "roomescape:block/key_pad_block" },
+    "facing=south,powered=true": { "model": "roomescape:block/key_pad_block", "y": 180 },
+    "facing=west,powered=true": { "model": "roomescape:block/key_pad_block", "y": 270 },
+    "facing=east,powered=true": { "model": "roomescape:block/key_pad_block", "y": 90 },
+    "facing=north,powered=false": { "model": "roomescape:block/key_pad_block" },
+    "facing=south,powered=false": { "model": "roomescape:block/key_pad_block", "y": 180 },
+    "facing=west,powered=false": { "model": "roomescape:block/key_pad_block", "y": 270 },
+    "facing=east,powered=false": { "model": "roomescape:block/key_pad_block", "y": 90 }
+  }
+}

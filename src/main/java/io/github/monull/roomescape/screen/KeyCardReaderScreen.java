@@ -7,6 +7,7 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.CheckboxWidget;
+import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.text.LiteralText;
 
 import java.util.ArrayList;
@@ -27,11 +28,11 @@ public class KeyCardReaderScreen extends Screen {
             list = ImmutableList.copyOf(((KeyCardReaderBlockEntity) entity).allows);
         }
         for (int i = 0; i <= 4; i++) {
-            CheckboxWidget box = new CheckboxWidget(30, 30 + 20 * (i - 1), 20, 20, new LiteralText(String.valueOf(i + 1)), list.get(i));
+            CheckboxWidget box = new CheckboxWidget(150, 100 + 20 * (i - 1), 20, 20, new LiteralText(String.valueOf(i + 1)), list.get(i));
             checkboxList.add(box);
             addDrawableChild(box);
         }
-        addDrawableChild(new ButtonWidget(50, 50, 50, 20, new LiteralText("exit"), button -> {
+        addDrawableChild(new ButtonWidget(250, 90, 50, 20, new LiteralText("save and exit"), button -> {
             this.onClose();
         }));
     }
@@ -54,5 +55,10 @@ public class KeyCardReaderScreen extends Screen {
         setFocused(null);
     }
 
-
+    @Override
+    public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
+        renderBackground(matrices);
+        drawCenteredText(matrices, textRenderer, new LiteralText("Key Card Reader Block Settings"), 220, 50, 0xFFFFFFFF);
+        super.render(matrices, mouseX, mouseY, delta);
+    }
 }

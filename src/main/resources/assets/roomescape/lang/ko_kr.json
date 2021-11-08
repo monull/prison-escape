@@ -1,6 +1,7 @@
 {
  "block.roomescape.key_card_reader": "키카드 판독기",
- "itemGroup.roomescape.general": "감옥탈출",
+ "block.roomescape.key_pad_block": "키패드 블럭",
+ "itemGroup.roomescape.general": "공통",
  "item.roomescape.key_card_level1": "레벨 1 키카드",
  "item.roomescape.key_card_level2": "레벨 2 키카드",
  "item.roomescape.key_card_level3": "레벨 3 키카드",
