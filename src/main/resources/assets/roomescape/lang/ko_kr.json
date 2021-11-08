@@ -1,10 +1,10 @@
 {
- "block.prisonescape.key_card_reader": "키카드 판독기",
- "itemGroup.prisonescape.general": "감옥탈출",
- "item.prisonescape.key_card_level1": "레벨 1 키카드",
- "item.prisonescape.key_card_level2": "레벨 2 키카드",
- "item.prisonescape.key_card_level3": "레벨 3 키카드",
- "item.prisonescape.key_card_level4": "레벨 4 키카드",
- "item.prisonescape.key_card_level5": "레벨 5 키카드",
- "item.prisonescape.block_modifier": "블럭 수정 지팡이"
+ "block.roomescape.key_card_reader": "키카드 판독기",
+ "itemGroup.roomescape.general": "감옥탈출",
+ "item.roomescape.key_card_level1": "레벨 1 키카드",
+ "item.roomescape.key_card_level2": "레벨 2 키카드",
+ "item.roomescape.key_card_level3": "레벨 3 키카드",
+ "item.roomescape.key_card_level4": "레벨 4 키카드",
+ "item.roomescape.key_card_level5": "레벨 5 키카드",
+ "item.roomescape.block_modifier": "블럭 수정 지팡이"
 }
