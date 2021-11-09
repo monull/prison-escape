@@ -44,15 +44,6 @@ public class KeyCardReaderBlock extends Block implements BlockEntityProvider {
     }
 
     @Override
-    public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-        super.onPlaced(world, pos, state, placer, itemStack);
-        KeyCardReaderBlockEntity be = (KeyCardReaderBlockEntity) world.getBlockEntity(pos);
-        for (int i = 0; i <= 4; i++) {
-            be.allows.add(i, false);
-        }
-    }
-
-    @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         Item item = player.getInventory().getMainHandStack().getItem();
         if (item instanceof KeyCardItem keyCard) {

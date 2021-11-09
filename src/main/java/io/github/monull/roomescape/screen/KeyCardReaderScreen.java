@@ -2,6 +2,8 @@ package io.github.monull.roomescape.screen;
 
 import com.google.common.collect.ImmutableList;
 import io.github.monull.roomescape.blockentity.KeyCardReaderBlockEntity;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.screen.Screen;
@@ -12,6 +14,7 @@ import net.minecraft.text.LiteralText;
 
 import java.util.ArrayList;
 
+@Environment(EnvType.CLIENT)
 public class KeyCardReaderScreen extends Screen {
 
     BlockEntity entity = null;
